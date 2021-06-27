@@ -52,6 +52,7 @@ h2 {
 section h3 {
   padding-bottom: .25em;
   border-bottom: 5px dotted;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -255,7 +256,7 @@ iframe[src*="youtube"] {
   top: 0px;
   width: 100%;
   z-index: -1;
-  opacity: 0.13;
+  opacity: 0.17;
 }
 
 .splash .wrap {
@@ -315,6 +316,23 @@ iframe[src*="youtube"] {
   float: left;
   left: 0;
   object-fit: cover;
+  opacity: 0.25;
+}
+
+.hero .item:hover img {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.75;
+  }
 }
 
 .items {
@@ -339,21 +357,52 @@ iframe[src*="youtube"] {
   width: 100%;
 }
 
-.blog .items h4,
-.blog .items time {
+.cloud ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  list-style: none;
+}
+
+.cloud a:after {
+  content: ",";
+}
+
+.cloud li {
+  margin-right: .5em;
+}
+
+webring-css {
+  border: 2px groove;
+  margin: 0rem auto;
+  color: #000099;
+  width: 33rem;
   display: block;
+  font-family: Times, serif;
+  text-decoration: underline;
+  box-shadow:
+    0 0 0 10px hsl(0, 0%, 50%),
+    0 0 0 15px hsl(0, 0%, 60%),
+    0 0 0 20px hsl(0, 0%, 70%),
+    0 0 0 25px hsl(0, 0%, 80%),
+    0 0 0 30px hsl(0, 0%, 90%);
+}
+
+.webring {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-gap: 1rem;
   text-align: center;
+}
+
+.webring .icon {
+  font-size: 100px;
 }
 
 time {
   display: block;
   text-align: left;
-}
-
-.blog .items time {
-  color: hsl(0, 0%, 40%);
-  font-size: .875rem;
-  margin-bottom: .75rem;
 }
 
 .align-center {

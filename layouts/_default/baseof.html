@@ -19,6 +19,8 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
+      <script>{{ readFile "static/scripts/webring.js" | safeJS }}</script>
+
   </head>
   <body>
     <section class="header blurry sticky">
@@ -38,13 +40,13 @@
               <a href="/kismet">Auntie Kismet</a>
             </li>
             <li>
-              <a href="/video">Videos</a>
-            </li>
-            <li>
               <a href="/b-sides/">B-Sides</a>
             </li>
             <li>
-              <a href="/remix">Remix Us</a>
+              <a href="/video">Videos</a>
+            </li>
+            <li>
+              <a href="/remix">Remix Kits</a>
             </li>
           </ul>
         </nav>
@@ -64,6 +66,14 @@
       {{ .Content }}
     {{ end }}
     <section class="footer">
+
+
+    {{ with .Params.webring }}
+      <webring-css site="https://nosignal.zone">
+        Aaaaaaaaaah
+      </webring-css>
+    {{ end }}
+
       <div class="wrap">
         <p>Created by <a href="https://where.coraline.codes">Coraline Ada Ehmke</a>. If you want, you can <a href="/contact/">get in touch</a>.</p>
       </div>
