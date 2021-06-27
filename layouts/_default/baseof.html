@@ -12,7 +12,7 @@
     {{ with .Params.splash }}
       <meta property="og:image" content="{{ . | relURL }}">
     {{ else }}
-      <meta property="og:image" content="{{ "images/nosignal.jpg" | relURL }}">
+      <meta property="og:image" content="{{ "images/nosignal_square.jpg" | relURL }}">
     {{ end }}
     <title>{{ block "title" . }}No Signal{{ with .Title }}&thinsp;&mdash;&thinsp;{{ partial "fancy-title.html" . }}{{ end }}{{ end }}</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
