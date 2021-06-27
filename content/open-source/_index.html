@@ -1,0 +1,116 @@
++++
+title = "Coraline Ada Ehmke: Open Source Projects"
+heading = "Open Source Projects"
+subheading = ""
+summary = "A sampling of Coraline's open source projects."
+image = "/images/splash/oss2.jpg"
++++
+
+{{% section class="alt-row" %}}
+<ul class="items">
+  <li>
+    <h4><a href="https://github.com/CoralineAda/ephemeral">Ephemeral</a></h4>
+    <p>
+      Ephemeral brings ORM-like functionality to non-persisted Ruby objects.
+      The anticipated use case is for an application that consumes an
+      API and materializes one or more collections of objects from a
+      JSON response or XML response. Another frequent use involves
+      providing relations and scopes to POROs (plain old Ruby objects).
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/society">Society</a></h4>
+    <p>
+      Society analyzes and presents a social graph of relationships between
+      classes in a Ruby or Rails project. It shows both afferent and
+      efferent coupling in a stunning visual graph. You can click on
+      class names to filter the data and focus on couplings (inbound
+      and outbound) related to a given class.
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/poro_plus">PoroPlus</a></h4>
+    <p>
+      PoroPlus is a tiny Ruby gem that provides friendly methods intended
+      to make POROs (Plain Old Ruby Objects) more useful, most
+      notably by adding intelligent initializers that auto-map to
+      defined attributes.
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/revenant">Revenant</a></h4>
+    <p>
+      (Work in progress!) Revenant is a gem that is designed to find
+      dead code in Ruby applications. This is a difficult problem
+      in a dynamic language, since static analysis of the abstract syntax
+      tree (AST) is impossible. As a result the output of the
+      gem will represent "best guesses" about methods that seem to be
+      unused, which when combined with human investigation and
+      instinct can inform a code cleanup effort.
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/rspec_statsd">Rspec Statsd</a></h4>
+    <p>
+      Test run times can be a valuable measure of code quality and the
+      overall health of your development efforts. Long test run
+      times are a sign that TDD is getting more difficult (or ignored),
+      and a test suite that is getting longer over time is a
+      symptom of best testing practices multiplying and spreading.
+      This custom Rspec formatters sends test execution times to
+      a statsd server for tracking your test executions over time.
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/ambient_spec">Ambient Spec</a></h4>
+    <p>
+      Ambient Spec is a unique Rspec and Minitest formatter that
+      turns your test output into soothing, atmospheric music.
+      Sweet sounds come from passing examples, and gentle gongs signal
+      failing tests. (Note that you won't hear anything unless your
+      test suite run is longer than 5 seconds. Silence is the most
+      pleasing sound of all.)
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/fukuzatsu">Fukuzatsu</a></h4>
+    <p>
+      Fukuzatsu ("complexity") is a tool for measuring code complexity
+      in Ruby class files. Its analysis generates scores based on
+      cyclomatic complexity algorithms, which in simplest terms measure
+      the number of execution paths through a given piece of code.
+      Fukuzatsu was created by Coraline Ada Ehmke with help from Mike
+      Ziwisky. It is intended to be a replacement for popular tools
+      that overstep the ABC algorithm and inject "opinionated" reasoning
+      about code complexity. It was originally inspired by Saikuro,
+      written by Zev Blut.
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/snuffle">Snuffle</a></h4>
+    <p>
+      Snuffle analyzes source code to identify "data clumps", clusters
+      of attributes that are often used together. It uses this
+      analysis to propose objects that may be extracted from a given
+      class. It also looks for objects that are hinted at by method
+      names and identifies them as "latent objects". For example,
+      if you have home_address and work_address methods in a User
+      class, Snuffle will tell you that you might want to extract
+      those methods to a latent Address class. Snuffle is still
+      pre-release and will not be ready for serious use until it
+      hits version 1.0.0. Based on an idea developed with Kerri Miller (@kerrizor).
+    </p>
+  </li>
+  <li>
+    <h4><a href="https://github.com/CoralineAda/alice">Alice</a></h4>
+    <p>
+      Alice is a Slack bot with intelligence and personality. Most
+      notable about the Alice project, aside from her natural
+      language processing capabilities and built-in Zork-like game,
+      is her functional-programming-inspired pipeline architecture.
+      You can see see a diagram of this architecture in the project
+      README.
+    </p>
+  </li>
+</ul>
+{{% /section %}}

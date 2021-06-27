@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /* this is so that the background is black at the top and white at the bottom when over-scrolling (in some browsers, at least) */
+  background: linear-gradient(hsl(0, 0%, 0%), hsl(0, 0%, 0%) 50%, hsl(0, 0%, 100%) 50%) fixed;
+  color: hsl(0, 0%, 100%);
+  font-size: .625rem;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  font: 400 1.25rem/2rem monospace;
+  font-synthesis: none;
+  font-variant-numeric: oldstyle-nums;
+  -moz-hanging-punctuation: first last allow-end;
+  -ms-hanging-punctuation: first last allow-end;
+  -webkit-hanging-punctuation: first last allow-end;
+  hanging-punctuation: first last allow-end;
+  min-height: 100vh;
+}
+
+form,
+h1,
+h2,
+h3,
+h4,
+nav {
+  font-family: "VT323", sans-serif;
+}
+
+section {
+  background: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 0%);
+}
+
+h2 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 4.5rem;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+
+h3 + * {
+  margin-top: 1.5rem;
+}
+
+h4 {
+  font-size: 1.75em;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+
+h4:before {
+  content: "<";
+}
+
+h4:after {
+  content: ">";
+}
+
+a {
+  color: hsl(10, 90%, 50%);
+  text-decoration: none;
+}
+
+a:hover {
+  color: hsl(10, 90%, 60%);
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: .75rem 0;
+}
+
+nav li {
+  padding: 0 .75rem;
+}
+
+nav a {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+blockquote,
+p,
+ul {
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  margin-bottom: 1.5rem;
+}
+
+/* work around weird Hugo output */
+p:empty {
+  display: none;
+}
+
+blockquote {
+  border-left: .25rem solid hsl(0, 0%, 60%);
+  padding-left: 1rem;
+}
+
+fieldset {
+  border: 0;
+}
+
+fieldset:last-child {
+  text-align: right;
+}
+
+label {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+label > :first-child {
+  padding: .25rem .75rem .25rem;
+  text-align: right;
+  width: calc(25% - 1.5rem);
+}
+
+button,
+input,
+textarea {
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: .0625rem solid hsl(0, 0%, 60%);
+  font: inherit;
+  padding: .125rem .25rem;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  min-height: 6.25rem;
+  resize: none;
+}
+
+iframe[src*="youtube"] {
+  height: 23.625rem;
+  width: 100%;
+}
+
+.button {
+  background: hsl(10, 90%, 50%);
+  border-color: hsl(10, 90%, 50%);
+  color: hsl(0, 0%, 100%);
+  padding: .25rem .75rem;
+}
+
+.button:hover {
+  background: hsl(10, 90%, 60%);
+  color: hsl(0, 0%, 100%);
+}
+
+.sticky {
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.header {
+  z-index: 1;
+  top: -1.5rem;
+}
+
+.header .wrap {
+  padding: 1.5rem 0 0;
+}
+
+.footer {
+  color: hsl(0, 0%, 60%);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.wrap {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.blurry {
+  background: hsla(0, 0%, 0%, .8);
+  -moz-backdrop-filter: saturate(180%) blur(1.25rem);
+  -ms-backdrop-filter: saturate(180%) blur(1.25rem);
+  -webkit-backdrop-filter: saturate(180%) blur(1.25rem);
+  backdrop-filter: saturate(180%) blur(1.25rem);
+}
+
+.small-caps {
+  font-size: .875rem;
+  letter-spacing: .0625rem;
+  text-transform: uppercase;
+}
+
+.splash {
+  display: flex;
+  flex-direction: column;
+  min-height: 14.0625rem;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  min-height: 350px;
+}
+
+.splash img {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: -1;
+}
+
+.splash .wrap {
+  align-items: stretch;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100%;
+  text-shadow: 0 .125rem .375rem hsla(0, 0%, 0%, .5);
+}
+
+.splash h2 {
+  flex: 1;
+}
+
+.splash h3 {
+  margin-top: 1.5rem;
+}
+
+.alt-row {
+  background: #eee;
+}
+
+.portrait {
+  float: left;
+  height: 24rem;
+  margin: 0 1.5rem 1.5rem 0;
+}
+
+.inline-image {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto 1.5rem auto;
+}
+
+.show-big {
+  display: none;
+}
+
+.items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: left;
+  list-style: none;
+}
+
+.items > li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.items > li p:nth-last-child(2) {
+  flex: 1;
+}
+
+.items img {
+  width: 100%;
+}
+
+.blog .items h4,
+.blog .items time {
+  display: block;
+  text-align: center;
+}
+
+time {
+  display: block;
+  text-align: left;
+}
+
+.blog .items time {
+  color: hsl(0, 0%, 40%);
+  font-size: .875rem;
+  margin-bottom: .75rem;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+pre {
+  padding: 1em;
+  background: #eee;
+  margin: 1em 0em;
+  border: 2px solid #aaa;
+}
+
+@media (min-width: 200px) {
+  html {
+    font-size: .75rem;
+  }
+}
+
+@media (min-width: 375px) {
+  html {
+    font-size: .875rem;
+  }
+}
+
+@media (min-width: 414px) {
+  html {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 1.125rem;
+  }
+
+  .items > li {
+    width: calc(50% - 1.5rem);
+  }
+
+  .items > li:nth-child(odd) {
+    margin-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 1.25rem;
+  }
+
+  .show-big {
+    display: unset;
+  }
+}

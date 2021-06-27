@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="{{ .Lang }}" class="{{ .Type }} {{ .Kind }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta property="og:url" content="{{ .Permalink }}">
+    {{ if .Params.Summary }}
+      <meta property="og:description" content="{{ .Params.Summary}}">
+    {{ else }}
+      <meta property="og:title" content="{{ .Params.Title }}">
+    {{ end }}
+    {{ with .Params.splash }}
+      <meta property="og:image" content="{{ . | relURL }}">
+    {{ else }}
+      <meta property="og:image" content="{{ "images/nosignal.jpg" | relURL }}">
+    {{ end }}
+    <title>{{ block "title" . }}No Signal{{ with .Title }}&thinsp;&mdash;&thinsp;{{ partial "fancy-title.html" . }}{{ end }}{{ end }}</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
+  </head>
+  <body>
+    <section class="header blurry sticky">
+      <div class="wrap">
+        <nav>
+          <ul class="menu small-caps">
+            <li>
+              <a href="/">[*]</a>
+            </li>
+            <li>
+              <a href="/calamity">Calamity Orchestra</a>
+            </li>
+            <li>
+              <a href="/shapes"><span class="show-big">Shapes with Two Edges</span></a>
+            </li>
+            <li>
+              <a href="/kismet">Auntie Kismet</a>
+            </li>
+            <li>
+              <a href="/video">Videos</a>
+            </li>
+            <li>
+              <a href="/remix">Remix</a>
+            </li>
+            <li>
+              <a href="/b-sides/">B-Sides</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+    <header>
+      {{ block "header" . }}
+        {{ .Content }}
+      {{ end }}
+    </header>
+    {{ block "main" . }}
+      {{ .Content }}
+    {{ end }}
+    <section class="footer">
+      <div class="wrap">
+        <p>Created by <a href="https://where.coraline.codes">Coraline Ada Ehmke</a>. If you want, you can <a href="/contact/">contact us</a>.</p>
+      </div>
+    </section>
+    <script>
+      {{ readFile "static/scripts/base.js" | safeJS }}
+    </script>
+  </body>
+</html>
