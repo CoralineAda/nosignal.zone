@@ -49,6 +49,11 @@ h2 {
   line-height: 4.5rem;
 }
 
+section h3 {
+  padding-bottom: .25em;
+  border-bottom: 5px dotted;
+}
+
 h3 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -80,6 +85,16 @@ a {
 
 a:hover {
   color: hsl(10, 90%, 60%);
+}
+
+blockquote {
+  text-align: center;
+  color: #fff;
+  background-color: hsl(10, 90%, 50%);
+  text-transform: uppercase;
+  font-size: .75rem;
+  line-height: 1rem;
+  padding: .5rem;
 }
 
 nav ul {
@@ -115,11 +130,6 @@ ul {
 /* work around weird Hugo output */
 p:empty {
   display: none;
-}
-
-blockquote {
-  border-left: .25rem solid hsl(0, 0%, 60%);
-  padding-left: 1rem;
 }
 
 fieldset {
@@ -208,7 +218,7 @@ iframe[src*="youtube"] {
 }
 
 .wrap {
-  max-width: 42rem;
+  max-width: 66rem;
   margin: 0 auto;
   padding: 1.5rem;
 }
@@ -245,6 +255,7 @@ iframe[src*="youtube"] {
   top: 0px;
   width: 100%;
   z-index: -1;
+  opacity: 0.13;
 }
 
 .splash .wrap {
@@ -282,6 +293,28 @@ iframe[src*="youtube"] {
 
 .show-big {
   display: none;
+}
+
+.hero {
+  font-size: 75%;
+  line-height: 1rem;
+}
+
+.hero .item {
+  background-color: #ddd;
+  margin-bottom: 3rem;
+}
+
+.hero .item p {
+  padding: 1rem;
+}
+
+.hero .item img {
+  height: 10rem;
+  width: 100%;
+  float: left;
+  left: 0;
+  object-fit: cover;
 }
 
 .items {

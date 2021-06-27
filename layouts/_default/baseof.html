@@ -41,10 +41,10 @@
               <a href="/video">Videos</a>
             </li>
             <li>
-              <a href="/remix">Remix</a>
+              <a href="/b-sides/">B-Sides</a>
             </li>
             <li>
-              <a href="/b-sides/">B-Sides</a>
+              <a href="/remix">Remix Us</a>
             </li>
           </ul>
         </nav>
@@ -55,12 +55,17 @@
         {{ .Content }}
       {{ end }}
     </header>
+    {{ with .Params.Quip }}
+      <section class="alt-row">
+        <div class="wrap"><blockquote>{{ . }}</blockquote></div>
+      </section>
+    {{ end }}
     {{ block "main" . }}
       {{ .Content }}
     {{ end }}
     <section class="footer">
       <div class="wrap">
-        <p>Created by <a href="https://where.coraline.codes">Coraline Ada Ehmke</a>. If you want, you can <a href="/contact/">contact us</a>.</p>
+        <p>Created by <a href="https://where.coraline.codes">Coraline Ada Ehmke</a>. If you want, you can <a href="/contact/">get in touch</a>.</p>
       </div>
     </section>
     <script>
