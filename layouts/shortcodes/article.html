@@ -1,8 +1,5 @@
 {{ with .Get "slug" }}
-  <article id="{{ . }}" class="internal-link">
-    {{ . }}
-      {{ partial "article-body" . }}
-  </article>
+  {{ range where $.Site.Pages "Params.slug" . | first 1 }}
+     {{ partial "article-body" . }}
+  {{ end }}
 {{ end }}
-
-
