@@ -1,6 +1,6 @@
 <article{{ with .Get "id" }} id="{{ . }}"{{ end }} class="internal-link">
   <h4>{{ .Get "title" }}</h4>
   {{ with .Get "slug" }}
-    {{ partial "article-body" . }}
+    {{ readFile . | partial "article-body" }}
   {{ end }}
 </article>
