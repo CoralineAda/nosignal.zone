@@ -105,7 +105,7 @@ nav ul {
   list-style: none;
   justify-content: center;
   margin: 0;
-  padding: .75rem 0;
+  padding: 0;
 }
 
 nav li {
@@ -205,9 +205,9 @@ iframe[src*="youtube"] {
   top: -1.5rem;
 }
 
-.header .wrap {
+/* .header .wrap {
   padding: 1.5rem 0 0;
-}
+} */
 
 .footer {
   color: hsl(0, 0%, 60%);
@@ -246,7 +246,7 @@ iframe[src*="youtube"] {
   overflow: hidden;
   position: relative;
   text-align: center;
-  min-height: 350px;
+  min-height: 180px;
 }
 
 .splash img {
@@ -257,17 +257,17 @@ iframe[src*="youtube"] {
   top: 0px;
   width: 100%;
   z-index: -1;
-  opacity: 0.17;
+  opacity: 0.4;
 }
 
-.splash .wrap {
+/* .splash .wrap {
   align-items: stretch;
   display: flex;
   flex: 1;
   flex-direction: column;
   height: 100%;
   text-shadow: 0 .125rem .375rem hsla(0, 0%, 0%, .5);
-}
+} */
 
 .splash h2 {
   flex: 1;
@@ -318,6 +318,7 @@ iframe[src*="youtube"] {
   left: 0;
   object-fit: cover;
   opacity: 0.25;
+  margin-bottom: 1rem;
 }
 
 .hero .item:hover img {
@@ -356,6 +357,10 @@ iframe[src*="youtube"] {
 
 .items img {
   width: 100%;
+}
+
+.items h4 {
+  margin: 0.4rem;
 }
 
 .cloud ul {

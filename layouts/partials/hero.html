@@ -1,9 +1,9 @@
 <figure id="{{ .Params.slug }}" class="internal-link">
-  <h4>{{ .Params.title }}!!!</h4>
+  <h4>{{ .Params.title }}</h4>
   {{ with .Params.image }}
     <img src="{{ . }}">
   {{ else }}
-    <img src="static/images/hero/crow.gif">
+    <img src="images/hero/stargazer.gif">
   {{ end }}
   {{ .Content }}
 </figure>
