@@ -41,6 +41,7 @@ nav {
 section {
   background: hsl(0, 0%, 100%);
   color: hsl(0, 0%, 0%);
+  margin-bottom: -3rem;
 }
 
 h2 {
@@ -66,7 +67,7 @@ h3 + * {
 }
 
 h4 {
-  font-size: 1.75em;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.25rem;
 }
@@ -77,6 +78,17 @@ h4:before {
 
 h4:after {
   content: ">";
+}
+
+.hero h4 {
+  padding-left: .75rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #900;
 }
 
 a {
@@ -325,6 +337,14 @@ iframe[src*="youtube"] {
   animation: pulse 1s infinite;
 }
 
+.hero .item p {
+  margin-bottom: 0rem;
+}
+
+.item figure {
+  margin-bottom: 1.5rem;
+}
+
 @keyframes pulse {
   0% {
     opacity: 0.25;
@@ -360,7 +380,7 @@ iframe[src*="youtube"] {
 }
 
 .items h4 {
-  margin: 0.4rem;
+  margin: 0.4rem 0rem;
 }
 
 .cloud ul {
@@ -387,7 +407,12 @@ iframe[src*="youtube"] {
 }
 
 .internal-link h4 {
-  color: hsl(10, 90%, 50%);
+  color: #900;
+}
+
+article ul {
+  margin-left: 1rem;
+  list-style: square;
 }
 
 webring-css {

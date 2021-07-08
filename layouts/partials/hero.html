@@ -1,4 +1,4 @@
-<figure id="{{ .Params.slug }}" class="internal-link">
+<article id="{{ .Params.slug }}" class="internal-link">
   <h4>{{ .Params.title }}</h4>
   {{ with .Params.image }}
     <img src="{{ . }}">
@@ -6,5 +6,5 @@
     <img src="images/hero/stargazer.gif">
   {{ end }}
   {{ .Content }}
-</figure>
+</article>
 
