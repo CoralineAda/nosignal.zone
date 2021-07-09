@@ -3,5 +3,4 @@ languageCode = "en-us"
 title = "*** No Signal ***"
 buildFuture = true
 disableHugoGeneratorInject = true
-footnoteReturnLinkContents = "^"
 enableGitInfo = true
