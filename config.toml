@@ -1,6 +1,7 @@
 baseURL = "https://nosignal.zone"
 languageCode = "en-us"
-title = "No Signal"
+title = "*** No Signal ***"
 buildFuture = true
 disableHugoGeneratorInject = true
 footnoteReturnLinkContents = "^"
+enableGitInfo = true

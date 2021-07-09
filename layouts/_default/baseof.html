@@ -26,25 +26,25 @@
         <nav>
           <ul class="menu small-caps">
             <li>
-              <a href="/">[*]</a>
+              <a href="/">[***]</a>
             </li>
             <li>
-              <a href="#featured">New Stuff</a>
+              <a href="#featured">[Featured Work]</a>
             </li>
             <li>
-              <a href="#streaming">Live in Studio</a>
+              <a href="#streaming">[Live in Studio]</a>
             </li>
             <li>
-              <a href="#music">Music Projects</a>
+              <a href="#music">[Music Projects]</a>
             </li>
             <li>
-              <a href="#junk-drawer">Junk Drawer</a>
+              <a href="#mixed-media">[Mixed Media]</a>
             </li>
             <li>
-              <a href="#inspirations">Inspirations</a>
+              <a href="#inspirations">[Inspirations]</a>
             </li>
             <li>
-              <a href="#contact">Contact Me</a>
+              <a href="#contact">[Contact Me]</a>
             </li>
           </ul>
         </nav>
@@ -55,9 +55,15 @@
         {{ .Content }}
       {{ end }}
     </header>
-    {{ with .Params.Quip }}
-      <section class="alt-row">
-        <div class="wrap"><blockquote>{{ . }}</blockquote></div>
+    {{ with .GitInfo }}
+      <section>
+        <div class="wrap">
+          <blockquote>
+            Latest commit:<br />
+            {{ .AbbreviatedHash }} at {{ .AuthorDate.UTC }} by {{ .AuthorName }}<br />
+            "{{ .Subject }}"
+          </blockquote>
+        </div>
       </section>
     {{ end }}
     {{ block "main" . }}
