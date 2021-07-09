@@ -1,7 +1,7 @@
 # Hugo output directory
 /public
+*.DS_Store
 
 # Vim swap files
 *.sw?
-.DS_Store
 

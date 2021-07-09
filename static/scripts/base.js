@@ -11,7 +11,6 @@ if (form) {
 
 function formDidSubmit(event) {
   const formData = new FormData(event.target);
-
   fetch(event.target.action, {
     method: 'POST',
     body: formData
@@ -26,36 +25,3 @@ function formDidSubmit(event) {
     console.error(`Oh no, something went wrong: ${err}`);
   });
 };
-
-//const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-const mediaQuery = window.matchMedia('prefers-reduced-motion: reduce');
-
-const ff = new Freezeframe({
-  trigger: "hover"
-});
-//
-//ff.start();
-//
-
-function handleAnimation(e) {
-  alert("handleAnimation called");
-  alert(ff.items.length);
-  if (e.match) {
-    ff.stop();
-    alert('Media Query Matched!');
-  }
-}
-//
-mediaQuery.addListener(handleAnimation, (e) => {
-  handleAnimation();
-  alert("listener called");
-});
-//
-if (ff) {
-//  handleAnimation(mediaQuery);
-  ff.start();
-//  alert(ff.items.length);
-//  handleAnimation(mediaQuery);
-}
-//
-

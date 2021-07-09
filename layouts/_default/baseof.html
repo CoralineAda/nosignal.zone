@@ -11,7 +11,6 @@
     {{ end }}
     {{ with .Params.splash }}
       <meta property="og:image" content="{{ . | relURL }}">
-
     {{ else }}
       <meta property="og:image" content="{{ "images/nosignal_square.jpg" | relURL }}">
     {{ end }}
@@ -20,7 +19,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
-    <script src="/scripts/freezeframe.js"></script>
   </head>
   <body>
     <section class="header blurry sticky">
@@ -75,6 +73,8 @@
         </p>
       </div>
     </section>
-    <script src="/scripts/base.js"/></script>
+    <script>
+      {{ readFile "static/scripts/base.js" | safeJS }}
+    </script>
   </body>
 </html>
