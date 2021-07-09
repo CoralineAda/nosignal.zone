@@ -1,9 +1,7 @@
-<figure class="splash{{ with .Params.Class }} {{ . }}{{ end }}">
-  <img style="background-color: rgb(228, 201, 198)"
-    class="lazy-load"
+<figure class="splash{{ with .Params.Class }} {{ . }}{{ end }} freezeframe">
+  <img
     alt="No Signal"
-    src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-    data-src="{{.Params.Image}}">
+    src="{{.Params.Image}}">
   <div class="wrap">
     <h2>{{.Params.Heading}}</h2>
     {{ with .Params.Subheading }}

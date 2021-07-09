@@ -342,28 +342,12 @@ iframe[src*="youtube"] {
   margin-bottom: 1rem;
 }
 
-.hero .item:hover img {
-  animation: pulse 1s infinite;
-}
-
 .hero .item p {
   margin-bottom: 0rem;
 }
 
 .item figure {
   margin-bottom: 1.5rem;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.25;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.75;
-  }
 }
 
 .items {
