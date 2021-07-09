@@ -11,6 +11,7 @@
     {{ end }}
     {{ with .Params.splash }}
       <meta property="og:image" content="{{ . | relURL }}">
+
     {{ else }}
       <meta property="og:image" content="{{ "images/nosignal_square.jpg" | relURL }}">
     {{ end }}
