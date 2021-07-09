@@ -1,5 +1,9 @@
 {{ with .Get "slug" }}
-  {{ range where $.Site.Pages "Params.slug" . | first 1 }}
+  {{ range $.Site.Pages (sort .GitInfo.AuthorDate.UTC "date" "desc") | first }}
      {{ partial "gitinfo" . }}
   {{ end }}
 {{ end }}
+
+
+ <!-- sort.Slice(pages, func(i, j int) bool {
+      return pages[i].GitInfo.AuthorDate.UTC < pages[j].GitInfo.AuthorDate.UTC -->
