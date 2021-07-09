@@ -38,7 +38,8 @@ function formDidSubmit(event) {
     return res.text();
   }).then(() => {
     document.getElementsByTagName('form')[0].style.display = "none"
-    document.getElementsByTagName('h3')[1].style.display = "block"
+    document.getElementsByName('instructions')[0].style.display = "none"
+    document.getElementsByName('thanks')[0].style.display = "block"
   }, (err) => {
     console.error(`Oh no, something went wrong: ${err}`);
   });
