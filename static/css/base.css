@@ -164,7 +164,7 @@ form {
 }
 
 label {
-  display: flex;
+  display: block;
   margin-bottom: 1.5rem;
 }
 
