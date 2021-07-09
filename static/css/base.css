@@ -409,10 +409,11 @@ iframe[src*="youtube"] {
 }
 
 .internal-link {
-  padding-top: 100px;
-  margin-top: -100px;
+  padding-top: 50px;
+  margin-top: -50px;
   -webkit-background-clip: content-box;
   background-clip: content-box;
+  margin-bottom:
 }
 
 .internal-link h4 {

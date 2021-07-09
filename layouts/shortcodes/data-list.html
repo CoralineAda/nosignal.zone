@@ -1,4 +1,4 @@
-<ul class="data-list">
+<ul>
   {{ $data := getCSV "," (.Get 0) }}
   {{ range $i, $r := sort (after 0 $data) "value" }}
     <li>

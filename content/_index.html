@@ -86,5 +86,37 @@ image = "/images/splash/color_bars_no_anim.jpg"
 {{% /section %}}
 
 {{% section id="contact" class="alt-row internal-link" %}}
-  {{% article slug="contact" %}}
+  <h3>Get in touch</h3>
+
+  <p name="instructions">Send me an an email, or reach me on Twitter at <a href="https://twitter.com/coralineada/">@CoralineAda</a>.
+
+  <form name="notify" method="post" action="/" data-modal-id="modal-notify" data-netlify="true" netlify-honeypot="bot-field">
+    <fieldset>
+      <label class="hidden">
+        <span>For bots only</span>
+        <input name="bot-field">
+        <input type="hidden" name="subject" value="Contact form">
+      </label>
+      <label>
+        <span>Name</span>
+        <input name="name" type="name" required>
+      </label>
+      <label>
+        <span>E-mail</span>
+        <input name="email" type="email" required>
+      </label>
+      <label>
+        <span>Message</span>
+        <textarea name="message" required></textarea>
+      </label>
+    </fieldset>
+    <fieldset>
+      <button type="submit" class="button">Send It</button>
+    </fieldset>
+  </form>
+
+  <p name="thanks" class="hidden">
+    Thank you for reaching out-- I'll be in touch soon.
+    You can also reach me on Twitter at <a href="https://twitter.com/coralineada/">@CoralineAda</a>.
+  </p>
 {{% /section %}}
