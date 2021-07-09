@@ -1,0 +1,11 @@
+{{ with .GitInfo }}
+  <section>
+    <div class="wrap">
+      <blockquote>
+        Latest commit:<br />
+        {{ .AbbreviatedHash }} at {{ .AuthorDate.UTC }} by {{ .AuthorName }}<br />
+        "{{ .Subject }}"
+      </blockquote>
+    </div>
+  </section>
+{{ end }}

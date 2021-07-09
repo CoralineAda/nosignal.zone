@@ -1,0 +1,5 @@
+{{ with .Get "slug" }}
+  {{ range where $.Site.Pages "Params.slug" . | first 1 }}
+     {{ partial "hash" . }}
+  {{ end }}
+{{ end }}

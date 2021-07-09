@@ -1,6 +1,9 @@
 {{ define "header" }}
   {{ partial "header.html" . }}
 {{ end }}
+{{ define "gitinfo" }}
+  {{ partial "hash.html" .}}
+{{ end }}
 {{ define "main" }}
   {{ .Content }}
 {{ end }}

@@ -56,20 +56,15 @@
         {{ .Content }}
       {{ end }}
     </header>
-    {{ with .Page.GitInfo }}
-      <section>
-        <div class="wrap">
-          <blockquote>
-            Latest commit:<br />
-            {{ .AbbreviatedHash }} at {{ .AuthorDate.UTC }} by {{ .AuthorName }}<br />
-            "{{ .Subject }}"
-          </blockquote>
-        </div>
-      </section>
+
+    {{ block "gitinfo" . }}
+      {{ .GitInfo }}
     {{ end }}
+
     {{ block "main" . }}
       {{ .Content }}
     {{ end }}
+
     <section class="footer">
       <div class="wrap">
         <p>
