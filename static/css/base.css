@@ -258,7 +258,7 @@ iframe[src*="youtube"] {
   overflow: hidden;
   position: relative;
   text-align: center;
-  min-height: 180px;
+  min-height: 300px;
 }
 
 .splash img {
@@ -272,17 +272,18 @@ iframe[src*="youtube"] {
   opacity: 0.4;
 }
 
-/* .splash .wrap {
+.splash .wrap {
   align-items: stretch;
   display: flex;
   flex: 1;
   flex-direction: column;
   height: 100%;
   text-shadow: 0 .125rem .375rem hsla(0, 0%, 0%, .5);
-} */
+}
 
 .splash h2 {
   flex: 1;
+  margin-top: 2.5rem;
 }
 
 .splash h3 {

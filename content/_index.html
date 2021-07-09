@@ -20,7 +20,7 @@ webring = ""
   </ul>
 {{% /section %}}
 
-{{% section id="process-and-artifacts" class="alt-row" %}}
+{{% section id="process-as-art" class="alt-row" %}}
   <h3>Process as Art</h3>
   <ul class="items">
     <li class="item">
@@ -28,18 +28,6 @@ webring = ""
     </li>
     <li class="item">
       {{% article slug="highlights" %}}
-    </li>
-    <li class="item">
-        <figure id="highlight-reels" class="internal-link">
-          <h4>Video archive</h4>
-          <p>
-            All the videos from my live sessions, original music videos, tribute videos,
-            and short films. Everything is Creative Commons licensed.
-            <a href="https://www.youtube.com/channel/UCqcD_H3IKmMP0Y-jAGH-N-g/videos">
-              Browse the archive on YouTube</a>.
-          </p>
-        </figure>
-      </article>
     </li>
   </ul>
 {{% /section %}}
@@ -52,107 +40,47 @@ webring = ""
     </li>
     <li class="item">
       {{% article slug="shapes-with-two-edges" %}}
-      <article id="shapes-with-two-edges" class="internal-link">
-        <h4>Shapes with Two Edges</h4>
-        <p>
-          A collaboration with synth pop duo <a href="http://eloquentmusic.com">Eloquent</a>.
-          They keep giving me major keys, I keep reaching for harmonic minors.
-          <a href="https://twitch.tv/djrascer">Randall Scott</a> creates most of the
-          synth tracks, so I mainly focus on guitar, (spending a lot of time with
-          an ebow. An experiment to see what happens when crisp, precise,
-          crystalline digital meets messy, analog, and atmospheric. The name comes
-          from an <a href="https://en.wikipedia.org/wiki/Digon">obscure Euclidean degenerate</a>.
-        </p>
-        <p>We've got plans for a 4-song LP, digital and vinyl. They're all
-          <a href="#wip">works in progress</a>.
-        </p>
-      </article>
     </li>
     <li class="item">
-      <article id="auntie-kismet" class="internal-link">
-        <h4>Auntie Kismet</h4>
-        <p>
-          Calamity Orchestra explores contemporary social and political issues
-          through the lends of retro new wave and post-punk musical styles.
-        </p>
-      </article>
+      {{% article slug="a-little-fire-scarecrow" %}}
     </li>
     <li class="item">
-      <article id="b-sides" class="internal-link">
-        <h4>B-Sides and Rarities</h4>
-        <p>
-          Calamity Orchestra explores contemporary social and political issues
-          through the lends of retro new wave and post-punk musical styles.
-          <a href="/b-sides">More...</a>
-        </p>
-      </article>
-    </li>
-    <li class="item">
-      <article id="remix" class="internal-link">
-        <h4>Remix Kits</h4>
-        <p>
-          Download stems from some of our favorite compositions. Requests for stems
-          from other pieces are welcomed.
-        </p>
-      </article>
+      {{% article slug="auntie-kismet" %}}
     </li>
   </ul>
 {{% /section %}}
 
-{{% section id="media" class="alt-row internal-link" %}}
-  <h3>Other Media</h3>
+{{% section id="junk-drawer" class="alt-row internal-link" %}}
+  <h3>Junk Drawer</h3>
   <ul class="items">
     <li class="item">
-      <article id="wip" class="internal-link">
-        <h4>WIP</h4>
-        <p>
-          Snapshots of how ideas are taking shape.
-        </p>
-      </article>
+      {{% article slug="work-in-progress" %}}
     </li>
     <li class="item">
-      <article id="tributes" class="internal-link">
-        <h4>Tributes</h4>
-        <p>
-          Multimedia poems set to echoes of musicks.
-        </p>
-      </article>
+      {{% article slug="video-archive" %}}
     </li>
-    <li class="item">
-      <article id="screenshots" class="internal-link">
-        <h4>Screenshots</h4>
-        <p>
-          Instant journaling with cursor focus and 5 key presses.
-        </p>
-      </article>
-    </li>
-    <li class="item">
-      <article id="private-collection" class="internal-link">
-        <h4><a href="#">Private collection</a></h4>
-        <p>
-          Copyright-agnostic.
-        </p>
-      </article>
+    <li>
+      {{% article slug="remix-kits" %}}
     </li>
   </ul>
 {{% /section %}}
 
-{{% section id="credits" class="internal-link" %}}
-  <h3>Credits</h3>
+{{% section id="inspirations" class="internal-link" %}}
+  <h3>Inspirations</h3>
   <ul class="items">
+    <li class="item">
+      <article id="inspiring-media" class="internal-link">
+        <h4>Flavors</h4>
+        <div class="cloud">
+          {{< randomized-data-list "/data/inspirations.csv" >}}
+        </div>
+      </article>
+    </li>
     <li class="item">
       <article id="friends" class="internal-link">
         <h4>Friends</h4>
         <div class="cloud">
           {{< data-list "/data/friends.csv" >}}
-        </div>
-      </article>
-    </li>
-    <li class="item">
-      <article id="inspirations" class="internal-link">
-        <h4>Inspirations</h4>
-        <div class="cloud">
-          {{< randomized-data-list "/data/inspirations.csv" >}}
         </div>
       </article>
     </li>
