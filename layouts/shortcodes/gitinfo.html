@@ -1,9 +1,9 @@
-{{ with .Get "slug" }}
-  {{ range $.Site.Pages (sort .GitInfo.AuthorDate.UTC "date" "desc") }}
-     {{ partial "gitinfo" . }}
+{{ range .Site.Pages | sort }}
+  {{ with .GitInfo }}
+    {{ .AuthorDate.UTC.Format "2006-01-02 15:04:05" }}
+  {{ else }}
+    {{ "1000" }}
   {{ end }}
+{{ "desc" | first 1 }}
+  {{ partial "gitinfo" . }}
 {{ end }}
-
-
- <!-- sort.Slice(pages, func(i, j int) bool {
-      return pages[i].GitInfo.AuthorDate.UTC < pages[j].GitInfo.AuthorDate.UTC -->
