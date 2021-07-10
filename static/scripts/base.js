@@ -1,14 +1,11 @@
 'use strict';
-
 const form = document.getElementsByTagName('form')[0];
-
 if (form) {
   form.addEventListener('submit', (e) => {
     this.formDidSubmit(e);
     e.preventDefault();
   });
 }
-
 function formDidSubmit(event) {
   const formData = new FormData(event.target);
   fetch(event.target.action, {
