@@ -1,5 +1,5 @@
 {{ range .Site.Pages.ByDate | first 1 }}
-  {{ if gt .Site.Home.GitInfo.AuthorDate .GitInfo.AuthorDate }}
+  {{ if lt .Site.Home.GitInfo.AuthorDate .GitInfo.AuthorDate }}
   Home wins
     {{ partial "gitinfo" .Site.Home }}
   {{ else }}
