@@ -1,6 +1,6 @@
 <figure class="splash">
-  <img alt="No Signal" src="/images/splash/{{.Params.Image}}" class="animated">
-  <img alt="No Signal" src="/images/splash/static/{{.Params.Image}}" class="static">
+  <img alt="No Signal" data-src="/images/splash/animated/{{ .Params.Image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+  <img alt="No Signal" data-src="/images/splash/static/{{ .Params.Image }}" class="static lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
   <div class="wrap">
     <h2>{{.Params.Heading}}</h2>
     {{ with .Params.Subheading }}
@@ -8,3 +8,5 @@
     {{ end }}
   </div>
 </figure>
+
+

@@ -19,7 +19,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
+    {{ if .Site.BuildDrafts }}
+      <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
+    {{ else }}
+      <style>
+        {{ readFile "static/css/base.css" | safeCSS }}
+      </style>
+    {{ end }}
   </head>
   <body>
     <section class="header blurry sticky">
