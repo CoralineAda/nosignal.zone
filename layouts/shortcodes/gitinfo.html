@@ -1,7 +1,9 @@
-{{ range .Site.Pages.ByDate.Reverse | first 1 }}
+{{ range .Site.Pages.ByDate | first 1 }}
   {{ if gt .Site.Home.GitInfo.AuthorDate .GitInfo.AuthorDate }}
+  Home wins
     {{ partial "gitinfo" .Site.Home }}
   {{ else }}
+  Page wins
     {{ partial "gitinfo" . }}
   {{ end }}
 {{ end }}
