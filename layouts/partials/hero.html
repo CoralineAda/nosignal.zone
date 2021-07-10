@@ -1,10 +1,10 @@
 <article id="{{ .Params.slug }}">
   <h4>{{ .Params.title }}</h4>
   {{ with .Params.image }}
-    <img src="/images/hero/{{ . }}" class="animated">
+    <img src="/images/hero/animated/{{ . }}" class="animated">
     <img src="/images/hero/static/{{ . }}" class="static">
   {{ else }}
-    <img src="/images/hero/stargazer.gif" class="animated">
+    <img src="/images/hero/animated/stargazer.gif" class="animated">
     <img src="/images/hero/static/stargazer.gif" class="static">
   {{ end }}
   {{ .Content }}
