@@ -1,11 +1,30 @@
 'use strict';
+
+// Lazy loading of images
+const LOAD_EVENT = 'load';
+const LOADING_CLASS = 'loading';
+const imgEls = document.querySelectorAll('img.lazy-load');
+
+imgEls.forEach((el) => {
+  const url = el.dataset.src;
+  el.classList.add(LOADING_CLASS);
+  el.addEventListener(LOAD_EVENT, (event) => {
+    el.classList.remove(LOADING_CLASS);
+  });
+  el.src = url;
+  el.dataset.src = null;
+});
+
+// Form handling stuff
 const form = document.getElementsByTagName('form')[0];
+
 if (form) {
   form.addEventListener('submit', (e) => {
     this.formDidSubmit(e);
     e.preventDefault();
   });
 }
+
 function formDidSubmit(event) {
   const formData = new FormData(event.target);
   fetch(event.target.action, {
