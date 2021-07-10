@@ -1,0 +1,16 @@
+<section>
+  <div class="wrap">
+    <blockquote class="gitinfo">
+      <h2>Latest commit:</h2>
+      <p>
+        {{ with .GitInfo }}
+          <a href="https://github.com/CoralineAda/nosignal.zone/tree/{{ .Hash }}">
+            {{ .AbbreviatedHash }} at {{ .AuthorDate.UTC }} by {{ .AuthorName }}
+          </a>
+          <br />
+          "{{ .Subject }}"
+        {{ end }}
+      </p>
+    </blockquote>
+  </div>
+</section>
