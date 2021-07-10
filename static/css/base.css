@@ -30,6 +30,11 @@ body {
   min-height: 100vh;
 }
 
+@font-face {
+  font-family: 'VT323';
+  src: url('/css/fonts/VT323-Regular.ttf')  format('truetype');
+}
+
 form,
 h1,
 h2,
