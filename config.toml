@@ -4,3 +4,4 @@ title = "*** No Signal ***"
 buildFuture = true
 disableHugoGeneratorInject = true
 enableGitInfo = true
+buildDrafts = true
