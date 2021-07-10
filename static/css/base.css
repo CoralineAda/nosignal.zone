@@ -30,11 +30,6 @@
   --line-height: 150%;
 }
 
-@font-face {
-  font-family: 'VT323';
-  src: url('/css/fonts/VT323-Regular.ttf')  format('truetype');
-}
-
 html {
   /* this is so that the background is black at the top and white at the bottom when over-scrolling (in some browsers, at least) */
   background: linear-gradient(hsl(0, 0%, 0%), hsl(0, 0%, 0%) 50%, hsl(0, 0%, 100%) 50%) fixed;
@@ -67,7 +62,7 @@ h2,
 h3,
 h4,
 nav {
-  font-family: "VT323", sans-serif;
+  font-family: "nosignal", sans-serif;
 }
 
 a {
@@ -183,13 +178,6 @@ h4:before {
 
 h4:after {
   content: ">";
-}
-
-h5 {
-  font-size: var(--font-size-200);
-  font-weight: 700;
-  line-height: var(--line-height);
-  color: var(--base-color-90);
 }
 
 iframe[src*="youtube"] {
