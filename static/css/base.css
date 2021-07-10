@@ -4,10 +4,41 @@
   padding: 0;
 }
 
+:root {
+  --base-color: 10;
+  --base-color-10: hsla(var(--base-color), 10%, 50%);
+  --base-color-20: hsla(var(--base-color), 20%, 50%);
+  --base-color-30: hsla(var(--base-color), 30%, 50%);
+  --base-color-40: hsla(var(--base-color), 40%, 50%);
+  --base-color-50: hsla(var(--base-color), 50%, 50%);
+  --base-color-60: hsla(var(--base-color), 60%, 50%);
+  --base-color-70: hsla(var(--base-color), 70%, 50%);
+  --base-color-80: hsla(var(--base-color), 80%, 50%);
+  --base-color-90: hsla(var(--base-color), 90%, 50%);
+  --base-color-100: hsla(var(--base-color), 100%, 50%);
+  --base-font-color: hsla(0, 0%, 0%);
+  --nav-font-color: var(--base-color-70);
+  --contrast-font-color: hsla(0, 0%, 100%);
+  --section-background-color: hsla(0, 0%, 100%);
+  --section-background-color-alt: hsla(0, 0%, 90%);
+  --base-font-size: 1.25rem;
+  --font-size-500: 250%;
+  --font-size-400: 200%;
+  --font-size-300: 150%;
+  --font-size-200: 125%;
+  --font-size-75: 85%;
+  --line-height: 150%;
+}
+
+@font-face {
+  font-family: 'VT323';
+  src: url('/css/fonts/VT323-Regular.ttf')  format('truetype');
+}
+
 html {
   /* this is so that the background is black at the top and white at the bottom when over-scrolling (in some browsers, at least) */
   background: linear-gradient(hsl(0, 0%, 0%), hsl(0, 0%, 0%) 50%, hsl(0, 0%, 100%) 50%) fixed;
-  color: hsl(0, 0%, 100%);
+  color: var(--base-font-color);
   font-size: .625rem;
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -20,7 +51,7 @@ body {
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  font: 400 1.25rem/2rem monospace;
+  font: 400 var(--base-font-size)/2rem monospace;
   font-synthesis: none;
   font-variant-numeric: oldstyle-nums;
   -moz-hanging-punctuation: first last allow-end;
@@ -40,13 +71,13 @@ nav {
 }
 
 a {
-  color: hsl(10, 90%, 50%);
+  color: var(--base-color-50);
   text-decoration: underline dotted;
   -webkit-text-decoration: underline dotted;
 }
 
 a:hover {
-  color: hsl(10, 90%, 60%);
+  color: var(--base-color-60);
   font-weight: 800;
 }
 
@@ -67,24 +98,24 @@ ul {
 
 blockquote {
   text-align: center;
-  color: #fff;
-  background-color: hsl(10, 90%, 50%);
+  color: var(--contrast-font-color);
+  background-color: var(--base-color-70);
   text-transform: uppercase;
-  font-size: .75rem;
-  line-height: 1rem;
+  font-size: var(--font-size-75);
+  line-height: var(--line-height);
   padding: .5rem;
 }
 
 button {
-  background: hsl(10, 90%, 50%);
-  border-color: hsl(10, 90%, 50%);
-  color: hsl(0, 0%, 100%);
-  padding: .25rem .75rem;
+  background: var(--base-color-70);
+  border-color: var(--base-color-30);
+  color: var(--contrast-font-color);
+  padding: 1rem;
 }
 
 button:hover {
-  background: hsl(10, 90%, 60%);
-  color: hsl(0, 0%, 100%);
+  background: var(--base-color-60);
+  color: var(--contrast-font-color);
 }
 
 button,
@@ -94,7 +125,7 @@ textarea {
   -ms-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  border: .0625rem solid hsl(0, 0%, 60%);
+  border: .0625rem solid var(--base-color-10);
   font: inherit;
   padding: .125rem .25rem;
 }
@@ -111,16 +142,22 @@ form {
   margin-bottom: 3em;
 }
 
-h2 {
-  font-size: 5rem;
+h1 {
+  font-size: var(--font-size-500);
   font-weight: 700;
-  line-height: 4.5rem;
+  line-height: calc(var(--line-height) * .5);
+}
+
+h2 {
+  font-size: var(--font-size-400);
+  font-weight: 700;
+  line-height: var(--line-height);
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: var(--font-size-400);
   font-weight: 700;
-  line-height: 2.25rem;
+  line-height: var(--line-height);
 }
 
 h3 + * {
@@ -128,15 +165,16 @@ h3 + * {
 }
 
 section h3 {
-  padding-bottom: .25em;
+  padding-bottom: .5rem;
   border-bottom: 5px dotted;
   text-transform: uppercase;
 }
 
 h4 {
-  font-size: 1.6rem;
+  font-size: var(--font-size-300);
   font-weight: 700;
-  line-height: 2.25rem;
+  line-height: var(--line-height);
+  color: var(--base-color-70);
 }
 
 h4:before {
@@ -148,10 +186,10 @@ h4:after {
 }
 
 h5 {
-  font-size: 1.1rem;
+  font-size: var(--font-size-200);
   font-weight: 700;
-  line-height: 2rem;
-  color: #900;
+  line-height: var(--line-height);
+  color: var(--base-color-90);
 }
 
 iframe[src*="youtube"] {
@@ -182,6 +220,7 @@ nav a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: var(--nav-font-color);
 }
 
 nav li {
@@ -203,11 +242,10 @@ p:empty {
 }
 
 section {
-  background: hsl(0, 0%, 100%);
-  color: hsl(0, 0%, 0%);
+  background: var(--section-background-color);
+  color: var(--base-font-color);
   margin-bottom: -3rem;
 }
-
 
 textarea {
   width: 100%;
@@ -216,7 +254,7 @@ textarea {
 }
 
 .alt-row {
-  background: #eee;
+  background: var(--section-background-color-alt);
 }
 
 .animated {
@@ -282,8 +320,7 @@ textarea {
 }
 
 .footer {
-  color: hsl(0, 0%, 60%);
-  font-size: 0.75rem;
+  font-size: var(--font-size-75);
   text-align: center;
 }
 
@@ -292,16 +329,16 @@ textarea {
 }
 
 .gitinfo a {
-  color: #fff;
+  color: var(--contrast-font-color);
 }
 
 .gitinfo a:hover {
-  color: #fff;
+  color: var(--contrast-font-color);
 }
 
 .gitinfo h2 {
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: var(--font-size-100);
+  line-height: var(--line-height);
   margin: 1rem;
 }
 
@@ -311,8 +348,8 @@ textarea {
 }
 
 .hero {
-  font-size: 75%;
-  line-height: 1rem;
+  font-size: var(--font-size-75);
+  line-height: var(--line-height);
 }
 
 .hero h4 {
@@ -320,7 +357,7 @@ textarea {
 }
 
 .hero .article {
-  background-color: #ddd;
+  background-color: var(--section-background-color-alt);
   margin-bottom: 3rem;
 }
 
@@ -344,19 +381,14 @@ textarea {
 }
 
 .internal-link {
-  padding-top: 70px;
-  margin-top: -70px;
+  padding-top: 90px;
+  margin-top: -90px;
   -webkit-background-clip: content-box;
   background-clip: content-box;
-  margin-bottom:
-}
-
-.internal-link h4 {
-  color: #900;
 }
 
 .small-caps {
-  font-size: .875rem;
+  font-size: var(--font-size-75);
   letter-spacing: .0625rem;
   text-transform: uppercase;
 }
@@ -368,18 +400,18 @@ textarea {
   overflow: hidden;
   position: relative;
   text-align: center;
-  min-height: 300px;
+  color: var(--contrast-font-color);
+  /* min-height: calc(var(--font-size-500) * 5); */
 }
 
 .splash img {
-  height: 100%;
   left: 0;
   object-fit: cover;
   position: absolute;
   top: 0px;
   width: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .splash .wrap {
@@ -391,13 +423,12 @@ textarea {
   text-shadow: 0 .125rem .375rem hsla(0, 0%, 0%, .5);
 }
 
-.splash h2 {
-  flex: 1;
-  margin-top: 2.5rem;
+.splash h1 {
+  margin-top: 4rem;
 }
 
-.splash h3 {
-  margin-top: 1.5rem;
+.splash h2 {
+  /* line-height: 100%; */
 }
 
 .sticky {

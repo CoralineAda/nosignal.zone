@@ -16,9 +16,6 @@
     {{ end }}
     <title>{{ block "title" . }}No Signal{{ with .Title }}&thinsp;&mdash;&thinsp;{{ partial "fancy-title.html" . }}{{ end }}{{ end }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://nosignal.zone/images/favicon/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     {{ if .Site.BuildDrafts }}
       <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
     {{ else }}
