@@ -2,11 +2,9 @@
 
 "If this were serious, there would be a manifesto."
 
-[nosignal.zone](https://nosignal.zone/)
-
 ## Is what you're doing here an attempt to reflect your anger or outrage-- almost-- beyond-- beyond-words outrage?
 
-No no no. What I do on nosignal has utterly no purpose. There's no purpose to it at all.
+No no no. What I do on [nosignal.zone](https://nosignal.zone/) has utterly no purpose. There's no purpose to it at all.
 
 ## Local development
 
@@ -23,7 +21,7 @@ or if you are using Arch Linux:
 pacman -S hugo
 ```
 
-or using [Homebrew](https://brew.sh) on macOS:
+or using [Homebrew](https://brew.sh) on Mac OS:
 ```
 brew install hugo
 ```
@@ -33,11 +31,17 @@ Then from the repository's root directory, start the development server:
 hugo server -D
 ```
 
-Open [http://localhost:1313](http://localhost:1313) in your browser.
+Now open [http://localhost:1313](http://localhost:1313) in your browser.
 
-...you've got *auto-reload* powers now. Save a file, page refreshes instantly. So good.
+> ...you've got *auto-reload* powers now. Save a file, page refreshes instantly. So good.
 
 ## Meet each visitor's accessibility requirements
+
+> [Accessibility is a human right.](https://ethicalsource.dev/principles/)
+
+If there are other accessibility techniques that should be included here, please
+[open an issue](https://github.com/CoralineAda/nosignal.zone/issues/new) to
+let me know.
 
 ### Animations
 
@@ -68,7 +72,7 @@ Open [http://localhost:1313](http://localhost:1313) in your browser.
 ## Now optimize the hell out of it
 Want to save some http requests to improve [page speed](https://developers.google.com/speed/pagespeed/insights/)?
 
-Be sure to set `buildDrafts = true` in your `config.toml`.
+> (Be sure to set `buildDrafts = true` in your `/config.toml`.)
 
 ### Lazy load images
 ```
@@ -123,3 +127,5 @@ Open `/static/css/fonts.css`. Paste the terminal output into this template:
 ```
 
 The font is now available for reference in `base.css` with the `font-family` value you gave it.
+
+*TODO:* write a shortcode here.
