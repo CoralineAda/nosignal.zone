@@ -1,0 +1,34 @@
+<figure>
+  {{ with .Get "link" }}<a href="{{ . }}">{{ end }}
+  {{ if .Get "animated" }}
+    <img
+      class="{{ with .Get "class" }}{{ . }}{{ end }} lazy-load animated"
+      data-src="/images/animated/{{ .Get "src" }}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      {{ if or (.Get "alt") (.Get "caption") }}
+        alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"
+      {{ end }} />
+  {{ else }}
+    <img
+      class="{{ with .Get "class" }}{{ . }}{{ end }} lazy-load {{ with .Get "animated"}}static {{ end }}"
+      data-src="/images/static/{{ .Get "src" }}"
+      src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+      {{ if or (.Get "alt") (.Get "caption") }}
+        alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" }}{{ end }}"
+      {{ end }} />
+  {{ end }}
+  {{ if .Get "link" }}</a>{{ end }}
+  {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr") }}
+    <figcaption>
+      {{ with .Get "title" }}<h4>{{ . }}</h4>{{ end }}
+      {{ if or (.Get "caption") (.Get "attr") }}
+        <p>
+          {{ .Get "caption" }}
+          {{ with .Get "attrlink" }}<a href="{{ . }}"> {{ end }}
+          {{ .Get "attr" }}
+          {{ if .Get "attrlink" }}</a> {{ end }}
+        </p>
+      {{ end }}
+    </figcaption>
+  {{ end }}
+</figure>
