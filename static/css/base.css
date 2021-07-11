@@ -469,13 +469,16 @@ textarea {
   html {
     font-size: 1.25rem;
   }
-
-  .show-big {
-    display: unset;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    marquee-style: none !important;
+    scroll-snap-type: none !important;
+    scroll-behavior: auto !important;
+  }
   .animated {
     display: none;
   }
@@ -483,4 +486,3 @@ textarea {
     display: block;
   }
 }
-

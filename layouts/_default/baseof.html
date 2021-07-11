@@ -76,8 +76,14 @@
         </p>
       </div>
     </section>
-    <script>
-      {{ readFile "static/scripts/base.js" | safeJS }}
-    </script>
+
+    {{ if .Site.BuildDrafts }}
+      <script src="/scripts/base.js"></script>
+    {{ else }}
+      <script>
+        {{ readFile "static/scripts/base.js" | safeJS }}
+      </script>
+    {{ end }}
+
   </body>
 </html>
