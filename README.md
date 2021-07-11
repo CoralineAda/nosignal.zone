@@ -28,7 +28,7 @@ brew install hugo
 
 Then from the repository's root directory, start the development server:
 ```
-hugo server -D
+hugo server --disableFastRender --buildDrafts
 ```
 
 Now open [http://localhost:1313](http://localhost:1313) in your browser.
@@ -71,8 +71,6 @@ let me know.
 
 ## Now optimize the hell out of it
 Want to save some http requests to improve [page speed](https://developers.google.com/speed/pagespeed/insights/)?
-
-> (Be sure to set `buildDrafts = true` in your `/config.toml`.)
 
 ### Lazy load images
 ```
