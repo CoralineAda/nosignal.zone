@@ -1,4 +1,8 @@
 <article id="{{ .Params.slug }}" class="internal-link">
-  <h4>{{ .Params.title }}</h4>
+  <h4>
+    <a href="#{{ .Params.slug }}">
+      {{ .Params.title }}
+    </a>
+  </h4>
   {{ .Content }}
 </article>
