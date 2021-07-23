@@ -81,6 +81,11 @@ article ul {
   list-style: square;
 }
 
+article figure img {
+  width: 80%;
+  opacity: 0.5;
+}
+
 blockquote,
 p,
 ul {
@@ -270,7 +275,7 @@ textarea {
 }
 
 .articles img {
-  width: 100%;
+  width: 97%;
 }
 
 .articles > li {
