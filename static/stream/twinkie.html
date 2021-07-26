@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="/css/fonts.css">
+<style>
+  body {
+    font-family: "nosignal";
+    font-size: 36px;
+    color: #990000;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0)
+  }
+
+  #elapsed {
+    background-color: #fff;
+    padding: 15px;
+    width: 300px;
+  }
+</style>
+<body onload="daysCounter()">
+<span id="elapsed"></span>
+
+<script>
+function daysCounter() {
+  const firstDate = new Date("12/21/2020");
+  const today = new Date();
+  var elapsedDays = dateDifference(today, firstDate);
+  document.getElementById('elapsed').innerHTML =  elapsedDays + " DAYS ELAPSED";
+}
+function dateDifference(date2, date1) {
+    const _MS_PER_DAY = 1000 * 60 * 60 * 24;
+    const utc1 = Date.UTC(date1.getFullYear(), date1.getMonth(), date1.getDate());
+    const utc2 = Date.UTC(date2.getFullYear(), date2.getMonth(), date2.getDate());
+    return Math.floor((utc2 - utc1) / _MS_PER_DAY);
+}
+
+</script>
+</body>
+</html>

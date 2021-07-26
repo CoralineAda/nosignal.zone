@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="/css/fonts.css">
+<style>
+  body {
+    font-family: "nosignal";
+    font-size: 36px;
+    color: #990000;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0)
+  }
+</style>
+<body onload="startTime()">
+<div id="date"></div>
+<div id="clock"></div>
+<div id="chrome">REC LOCK</div>
+
+<script>
+function formatDate(date) {
+    var d = new Date(date),
+        month = '' + (d.getMonth() + 1),
+        day = '' + d.getDate(),
+        year = d.getFullYear();
+
+    if (month.length < 2)
+        month = '0' + month;
+    if (day.length < 2)
+        day = '0' + day;
+
+    return [year, month, day].join('-');
+};
+
+function startTime() {
+  const today = new Date();
+  let d = today.getDate();
+  let dd = today.toISOString();
+  let mo = today.getMonth() + 1;
+  let y = today.getFullYear();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let ms = today.getMilliseconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('date').innerHTML =  formatDate(today);
+  document.getElementById('clock').innerHTML = "TCR 00:" + h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+</body>
+</html>
