@@ -1,12 +1,9 @@
 <article id="{{ .Params.slug }}">
   <h4>{{ .Params.title }}</h4>
   {{ $alt := .Params.title }}
-  {{ with .Params.image }}
-    <img data-src="/images/animated/hero/{{ . }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
-    <img data-src="/images/static/hero/{{ . }}" class="static lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
-  {{ else }}
-    <img data-src="/images/animated/hero/stargazer.gif" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
-    <img data-src="/images/static/hero/stargazer.gif" class="static lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
+  {{ if .Params.animated }}
+    <img data-src="/images/animated/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
   {{ end }}
+  <img data-src="/images/static/hero/{{ .Params.image }}" class="static lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
   {{ .Content }}
 </article>
