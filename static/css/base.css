@@ -172,12 +172,8 @@ h4 {
   color: var(--base-color-70);
 }
 
-h4:before {
-  content: "<";
-}
-
-h4:after {
-  content: ">";
+h4 a {
+  color: var(--base-color-70);
 }
 
 iframe[src*="youtube"] {

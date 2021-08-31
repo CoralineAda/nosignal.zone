@@ -1,5 +1,9 @@
-<article id="{{ .Params.slug }}">
-  <h4>{{ .Params.title }}</h4>
+<article id="{{ .Params.slug }}" class="internal-link">
+  <h4>
+    <a href="#{{ .Params.slug }}">
+      {{ .Params.title }}
+    </a>
+  </h4>
   {{ $alt := .Params.title }}
   {{ if .Params.animated }}
     <img data-src="/images/animated/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
