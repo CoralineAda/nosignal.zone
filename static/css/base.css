@@ -77,8 +77,12 @@ a:hover {
 }
 
 article ul {
-  margin-left: 1rem;
+  margin-left: 3rem;
   list-style: square;
+}
+
+article li {
+  margin-bottom: 1rem;
 }
 
 blockquote,
@@ -367,6 +371,7 @@ textarea {
 .internal-link {
   padding-top: 120px;
   margin-top: -120px;
+  margin-bottom: 50px;
   -webkit-background-clip: content-box;
   background-clip: content-box;
 }
