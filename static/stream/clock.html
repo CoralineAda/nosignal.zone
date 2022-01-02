@@ -7,12 +7,20 @@
     font-size: 36px;
     color: #990000;
     line-height: 30px;
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0, 0, 0);
   }
+
+  #clock {
+    background-color: #990000;
+    color: #fff;
+    width: 18rem;
+    padding: .25rem .1rem .3rem .2rem;
+  }
+
 </style>
 <body onload="startTime()">
-<div id="date"></div>
 <div id="clock"></div>
+<div id="date"></div>
 <div id="chrome">REC LOCK</div>
 
 <script>
@@ -43,8 +51,8 @@ function startTime() {
   m = checkTime(m);
   s = checkTime(s);
   document.getElementById('date').innerHTML =  formatDate(today);
-  document.getElementById('clock').innerHTML = "TCR 00:" + h + ":" + m + ":" + s;
-  setTimeout(startTime, 1000);
+  document.getElementById('clock').innerHTML = "TCR 00:" + h + ":" + m + ":" + s + ":" + ms;
+  setTimeout(startTime, 10);
 }
 
 function checkTime(i) {
