@@ -24,6 +24,7 @@
   --base-font-size: 1.25rem;
   --font-size-500: 250%;
   --font-size-400: 200%;
+  --font-size-350: 175%;
   --font-size-300: 150%;
   --font-size-200: 125%;
   --font-size-75: 85%;
@@ -69,6 +70,10 @@ a {
   color: var(--base-color-50);
   text-decoration: underline dotted;
   -webkit-text-decoration: underline dotted;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
 }
 
 a:hover {
@@ -170,7 +175,7 @@ section h3 {
 }
 
 h4 {
-  font-size: var(--font-size-300);
+  font-size: var(--font-size-350);
   font-weight: 700;
   line-height: var(--line-height);
   color: var(--base-color-70);
@@ -297,7 +302,7 @@ textarea {
   flex-wrap: wrap;
   justify-content: left;
   list-style: none;
-  margin-left: 0rem;
+  margin-left: 0px;
 }
 
 .cloud a:after {
