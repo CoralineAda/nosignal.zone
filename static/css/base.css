@@ -177,7 +177,7 @@ section h3 {
 h4 {
   font-size: var(--font-size-350);
   font-weight: 700;
-  line-height: var(--line-height);
+  line-height: var(--font-size-200);
   color: var(--base-color-70);
 }
 
@@ -309,20 +309,20 @@ textarea {
   margin-right: .5em;
 }
 
-.embedded-player {
+.embedded-bandcamp {
   position: absolute;
-  bottom: 0rem;
-  padding: 3rem 1rem 3rem 1rem;
-  height: 16rem;
+  bottom: -2rem;
+  padding: 3rem 1rem 1rem 1rem;
+  height: 13rem;
   width: 90%;
 }
 
-.embedded-playlist {
-  /* position: absolute;
-  bottom: 0rem; */
-  padding: 3rem 1rem 0rem 1rem;
-  height: 100%;
-  width: 90%;
+.embedded-soundcloud {
+  position: absolute;
+  bottom: 0rem;
+  padding: 3rem 1rem 1rem 1rem;
+  height: 13rem;
+  width: 100%;
 }
 
 .footer {
