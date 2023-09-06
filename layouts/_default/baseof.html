@@ -16,15 +16,8 @@
     {{ end }}
     <title>{{ block "title" . }}No Signal{{ with .Title }}&thinsp;&mdash;&thinsp;{{ partial "fancy-title.html" . }}{{ end }}{{ end }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="https://nosignal.zone/images/favicon/favicon.ico">
-    {{ if .Site.BuildDrafts }}
-      <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
-      <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
-    {{ else }}
-      <style>
-        {{ readFile "static/css/fonts.css" | safeCSS }}
-        {{ readFile "static/css/base.css" | safeCSS }}
-      </style>
-    {{ end }}
+    <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
   </head>
   <body>
     {{ partial "navigation" }}

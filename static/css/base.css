@@ -21,7 +21,7 @@
   --contrast-font-color: hsla(0, 0%, 100%);
   --section-background-color: hsla(0, 0%, 100%);
   --section-background-color-alt: hsla(0, 0%, 90%);
-  --base-font-size: 1.25rem;
+  --base-font-size: 1rem;
   --font-size-500: 250%;
   --font-size-400: 200%;
   --font-size-350: 175%;
@@ -302,15 +302,18 @@ textarea {
   flex-wrap: wrap;
   justify-content: left;
   list-style: none;
-  margin-left: 0px;
-}
-
-.cloud a:after {
-  content: ",";
+  margin-left: 1rem;
 }
 
 .cloud li {
   margin-right: .5em;
+}
+
+.embedded-player {
+  position: absolute;
+  bottom: 1rem;
+  padding: 3rem 1rem 0rem 1rem;
+  height: 9rem;
 }
 
 .footer {
@@ -351,8 +354,11 @@ textarea {
 }
 
 .hero .article {
+  position: relative;
   background-color: var(--section-background-color-alt);
   margin-bottom: 3rem;
+  min-height: 30rem;
+  /* padding-bottom: 4rem; */
 }
 
 .hero .article p {

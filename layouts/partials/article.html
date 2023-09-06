@@ -1,12 +1,10 @@
 <article id="{{ .Params.slug }}" class="internal-link">
   {{ $alt := .Params.title }}
-  {{ if (not (eq .Params.image "") ) }}
+  {{ if isset .Params "image" }}
     <img data-src="/images/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
   {{ end }}
   <h4>
-    <a href="#{{ .Params.slug }}">
-      {{ .Params.title }}
-    </a>
+    {{ .Params.title }}
   </h4>
   {{ .Content }}
 </article>
