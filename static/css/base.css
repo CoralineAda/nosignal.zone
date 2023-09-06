@@ -297,6 +297,7 @@ textarea {
   flex-wrap: wrap;
   justify-content: left;
   list-style: none;
+  margin-left: 0rem;
 }
 
 .cloud a:after {
@@ -360,7 +361,7 @@ textarea {
   float: left;
   left: 0;
   object-fit: cover;
-  opacity: 0.25;
+  opacity: 0.7;
   margin-bottom: 1rem;
 }
 
