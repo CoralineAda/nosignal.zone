@@ -1,5 +1,5 @@
 {{ with .Get "slug" }}
-  {{ range where $.Site.Pages "Params.slug" . | first 1 }}
-     {{ partial "article" . }}
+  {{ range (where (where $.Site.Pages "Section" "articles") ".Params.slug" . ) | first 1 }}
+    {{ partial "article" . }}
   {{ end }}
 {{ end }}

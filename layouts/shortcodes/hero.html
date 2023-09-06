@@ -1,5 +1,0 @@
-{{ with .Get "slug" }}
-  {{ range (where (where $.Site.Pages "Section" "heroes") ".Params.slug" . ) | first 1 }}
-    {{ partial "hero" . }}
-  {{ end }}
-{{ end }}

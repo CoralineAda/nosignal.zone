@@ -1,8 +1,18 @@
-<article id="{{ .Params.slug }}" class="internal-link">
-  <h4>
-    <a href="#{{ .Params.slug }}">
+{{ if isset .Params "image" }}
+  <article id="{{ .Params.slug }}" class="has-hero">
+    {{ $alt := .Params.title }}
+    <img data-src="/images/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
+    <h4>
       {{ .Params.title }}
-    </a>
-  </h4>
-  {{ .Content }}
+    </h4>
+    {{ .Content }}
+  </article>
+{{ else }}
+  <article id="{{ .Params.slug }}">
+    <h4>
+      {{ .Params.title }}
+    </h4>
+    {{ .Content }}
 </article>
+
+{{ end }}
