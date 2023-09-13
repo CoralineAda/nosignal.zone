@@ -4,3 +4,5 @@ title = "*** No Signal ***"
 buildFuture = true
 disableHugoGeneratorInject = true
 enableGitInfo = true
+[params]
+	tagline = "Media for a Burning World"

@@ -1,5 +1,12 @@
+{{ define "header" }}
+  {{ partial "header" . }}
+{{ end }}
 {{ define "main" }}
   <section>
-    {{ .Content }}
-  </section>
+  <div class="wrap">
+    <section class="internal-link">
+      {{ partial "article" . }}
+    </section>
+  </div>
+</section>
 {{ end }}

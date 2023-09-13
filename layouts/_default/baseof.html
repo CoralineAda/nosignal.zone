@@ -2,6 +2,7 @@
 <html lang="{{ .Lang }}" class="{{ .Type }} {{ .Kind }}">
   <head>
     <meta charset="utf-8">
+    <link rel="alternate" type="application/rss+xml" href="https://nosignal.zone/index.xml" >
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <meta property="og:url" content="{{ .Permalink }}">
     {{ if .Params.Summary }}
@@ -14,7 +15,14 @@
     {{ else }}
       <meta property="og:image" content="{{ "images/nosignal_square.jpg" | relURL }}">
     {{ end }}
-    <title>{{ block "title" . }}No Signal{{ with .Title }}&thinsp;&mdash;&thinsp;{{ partial "fancy-title.html" . }}{{ end }}{{ end }}</title>
+    <title>
+        {{ block "title" . }}
+          No Signal
+          {{ with or .Title .Site.Params.tagline }}
+            | {{ . }}
+          {{ end }}
+        {{ end }}
+    </title>
     <link rel="shortcut icon" type="image/x-icon" href="https://nosignal.zone/images/favicon/favicon.ico">
     <link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}">
     <link rel="stylesheet" href="{{ "css/base.css" | relURL }}">
@@ -34,10 +42,13 @@
     <section class="footer">
       <div class="wrap">
         <p>
-          Created by <a href="https://where.coraline.codes">Coraline Ada Ehmke</a>.
-          CoralineAda on
-          <a href="https://twitch.com/CoralineAda">Twitch</a> and
-          <a href="https://ruby.social/@CoralineAda">Mastodon</a>.
+          &copy; Copyright {{ now.Format "2006" }} <a href="https://where.coraline.codes">Coraline Ada Ehmke</a>.
+          You can also find me at
+          <a href="https://coralineada.bandcamp.com/">Bandcamp</a>,
+          <a href="https://soundcloud.com/coralineada">SoundCloud</a>,
+          <a href="https://twitch.com/CoralineAda">Twitch</a>,
+          <a href="https://ruby.social/@CoralineAda">Mastodon</a>,
+          or <a href="https://where.coraline.codes">where.coraline.codes</a>.
         </p>
       </div>
     </section>
