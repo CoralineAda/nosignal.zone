@@ -47,6 +47,9 @@
         {{ end }}
         {{ .Content | html }}
       </description>
+      {{ if isset .Params "mediaUrl" }}
+        <enclosure url="{{ .Page.Params.MediaUrl }}" length="{{ .Page.Params.MediaLength }}" type=".Page.Params.MediaType" />
+      {{ end }}
     </item>
     {{ end }}
   </channel>
