@@ -50,7 +50,7 @@
         {{ .Content | html }}
       </description>
       {{ if isset .Params "mediaurl" }}
-        <enclosure url="{{ .Page.Params.MediaUrl }}" length="{{ .Page.Params.MediaSizeInBytes }}" type="{{ .Page.Params.MediaType }} " />
+        <enclosure url="http://localhost:1313{{ .Page.Params.MediaUrl }}" length="{{ .Page.Params.MediaSizeInBytes }}" type="{{ .Page.Params.MediaType }}" />
       {{ end }}
     </item>
     {{ end }}
