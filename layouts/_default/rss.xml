@@ -44,13 +44,17 @@
       <guid>{{ .Permalink }}</guid>
       {{ if isset .Params "image" }}
         {{ $banner := .Page.Params.Image }}
-        {{ printf "<![CDATA[<img src=\"/images/hero/%s\"/>]]>" $banner | safeHTML }}
+        {{ printf "<img src=\"/images/hero/%s\"/>" $banner | safeHTML }}
       {{ end }}
       <description>
+        {{ if isset .Params "image" }}
+          {{ $banner := .Page.Params.Image }}
+          {{ printf "<![CDATA[<img src=\"/images/hero/%s\"/>]]>" $banner | safeHTML }}
+        {{ end }}
         {{ .Content | html }}
       </description>
-      {{ if isset .Params "mediaUrl" }}
-        <enclosure url="http://localhost:1313{{ .Page.Params.MediaUrl }}" length="{{ .Page.Params.MediaSizeInBytes }}" type="{{ .Page.Params.MediaType }}" />
+      {{ if isset .Params "mediaurl" }}
+        <enclosure url="{{ .Page.Params.MediaUrl }}" length="{{ .Page.Params.MediaSizeInBytes }}" type="{{ .Page.Params.MediaType }}" />
       {{ end }}
     </item>
     {{ end }}
