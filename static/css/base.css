@@ -359,7 +359,7 @@ article {
   position: relative;
   background-color: var(--section-background-color-alt);
   min-height: 33rem;
-  padding-bottom: 6rem;
+  padding-bottom: 1rem;
   border-top: 0rem;
 }
 
