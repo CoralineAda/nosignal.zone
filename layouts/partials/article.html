@@ -5,7 +5,11 @@
     <h4>
       {{ .Params.title }}
     </h4>
-    <div class="timestamp">{{ time.Format "2006-01-02" (os.Stat .File.Path).ModTime }}</div>
+    {{ with .GitInfo }}
+      <div class="timestamp">
+        {{ .AuthorDate.Format "2006-01-02" }}
+      </div>
+    {{ end }}
     {{ .Content }}
   </article>
 {{ else }}
