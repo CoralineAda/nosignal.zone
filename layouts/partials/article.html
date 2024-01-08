@@ -5,6 +5,7 @@
     <h4>
       {{ .Params.title }}
     </h4>
+    <div class="timestamp">{{ time.Format "2006-01-31" (os.Stat .File.Path).ModTime }}</div>
     {{ .Content }}
   </article>
 {{ else }}
@@ -12,6 +13,7 @@
     <h4>
       {{ .Params.title }}
     </h4>
+    <div class="timestamp">{{ time.Format "2006-01-31" (os.Stat .File.Path).ModTime }}</div>
     {{ .Content }}
 </article>
 

@@ -388,6 +388,16 @@ article img {
   margin-bottom: 1rem;
 }
 
+.timestamp {
+  display: none;
+  font-size: .75rem;
+  margin-left: .8rem;
+}
+
+#featured .timestamp {
+  display: block;
+}
+
 .hidden {
   display: none;
 }
