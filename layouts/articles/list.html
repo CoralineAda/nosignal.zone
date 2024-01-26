@@ -1,12 +1,19 @@
+{{ define "header" }}
+  {{ partial "header" . }}
+{{ end }}
 {{ define "main" }}
-<section id="featured" class="internal-link">
-  <h3>Featured Work</h3>
-  <ul class="articles">
-  {{ range .Pages }}
-    <li>
-      {{ partial "article" . }}
-    </li>
-  {{ end }}
-  </ul>
+<section>
+  <section id="featured" class="internal-link">
+    <div class="wrap">
+      <h3>News Archive</h3>
+      <ul class="articles">
+        {{ range where .Pages "Type" "news" }}
+          <li>
+            {{ partial "article" . }}
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
 </section>
 {{ end }}
