@@ -9,7 +9,7 @@
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:webfeeds="http://webfeeds.org/rss/1.0">
   <channel>
-<title>NOSIGNAL.ZONE by Coraline Ada Ehmke</title>
+<title>NOSIGNAL Media Labs</title>
 <link>{{ .Permalink }}</link>
 <description>The latest noise from nosignal.zone</description>
 {{ with .Site.LanguageCode }}
@@ -23,18 +23,11 @@
   {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
 {{- end -}}
 {{ range $pages }}
+  {{ if isset .Params "date" }}
     <item>
       <title>{{ .Title }}</title>
       <link>{{ .Permalink }}</link>
-      {{ with .GitInfo }}
-        <pubDate>
-        {{ .AuthorDate.UTC.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}
-        </pubDate>
-      {{ else }}
-        <pubDate>
-          {{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}
-        </pubDate>
-      {{ end }}
+      <pubDate>{{ .Date }}</pubDate>
       <guid>{{ .Permalink }}</guid>
       <description>
         {{ if isset .Params "image" }}
@@ -44,6 +37,7 @@
         {{ .Content | html }}
       </description>
     </item>
-    {{ end }}
-  </channel>
+  {{ end }}
+{{ end }}
+</channel>
 </rss>
