@@ -416,6 +416,13 @@ article img {
   text-transform: uppercase;
 }
 
+.soundcloud-player {
+  border: 0;
+  width: 90%;
+  margin: 0 1rem;
+  text-align: center;
+}
+
 .splash {
   display: flex;
   flex-direction: column;
