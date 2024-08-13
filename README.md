@@ -110,7 +110,7 @@ Same thing with our javascript:
 
 From your command line:
 
-`$ base64 some_font.ttf`
+`$ base64 -u some_font.ttf`
 
 Open `/static/css/fonts.css`. Paste the terminal output into this template:
 
