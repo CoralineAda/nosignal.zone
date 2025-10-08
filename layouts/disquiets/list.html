@@ -1,0 +1,34 @@
+{{ define "header" }}
+  {{ partial "header" . }}
+{{ end }}
+{{ define "main" }}
+<section>
+  <section id="featured" class="internal-link">
+    <div class="wrap">
+      <h3>Disquiets</h3>
+      <ul class="articles">
+        {{ range where .Pages "Section" "disquiets"}}
+          <li>
+            {{ if isset .Params "image" }}
+              <article id="{{ .Params.slug }}" class="has-hero">
+                {{ $alt := .Params.title }}
+                <img data-src="/images/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
+            {{ else }}
+              <article id="{{ .Params.slug }}">
+            {{ end }}
+            <h4>
+              <a href="{{ .Permalink }}">{{ .Params.title }}</a>
+            </h4>
+            {{ with .Date }}
+              <div class="timestamp">
+                {{ .Format "2006-01-02" }}
+              </div>
+            {{ end }}
+          </article>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </section>
+</section>
+{{ end }}
