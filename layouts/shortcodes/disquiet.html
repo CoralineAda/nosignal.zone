@@ -1,0 +1,5 @@
+{{ with .Get "slug" }}
+  {{ range (where (where $.Site.Pages "Section" "disquiets") ".Params.slug" . ) | first 1 }}
+    {{ partial "article" . }}
+  {{ end }}
+{{ end }}
