@@ -1,7 +1,10 @@
 {{ if isset .Params "image" }}
   <article id="{{ .Params.slug }}" class="has-hero">
-    {{ $alt := .Params.title }}
-    <img data-src="/images/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ $alt }}">
+    {{ if isset .Params "alt" }}
+      <img data-src="/images/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ .Params.alt }}">
+    {{ else }}
+      <img data-src="/images/hero/{{ .Params.image }}" class="animated lazy-load" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="{{ .Params.title }} cover image">
+    {{ end }}
     <h4>
       <a href="{{ .Permalink }}">{{ .Params.title }}</a>
     </h4>
