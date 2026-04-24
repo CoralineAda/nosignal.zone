@@ -31,6 +31,10 @@
   --line-height: 150%;
 }
 
+p {
+  color
+}
+
 html {
   /* this is so that the background is black at the top and white at the bottom when over-scrolling (in some browsers, at least) */
   background: linear-gradient(hsl(0, 0%, 0%), hsl(0, 0%, 0%) 50%, hsl(0, 0%, 100%) 50%) fixed;
