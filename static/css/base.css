@@ -483,6 +483,9 @@ article img {
   html {
     font-size: .75rem;
   }
+  .articles > li {
+    width: 100%;
+  }
 }
 
 @media (min-width: 375px) {
@@ -495,6 +498,13 @@ article img {
   html {
     font-size: 1rem;
   }
+  .articles > li {
+    width: calc(50% - 1.5rem);
+  }
+  .articles > li:nth-child(odd) {
+    margin-right: 3rem;
+  }
+
 }
 
 @media (min-width: 768px) {
